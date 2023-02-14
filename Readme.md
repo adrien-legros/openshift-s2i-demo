@@ -12,6 +12,10 @@ oc new-app --name python-s2i python:3.8-ubi8~https://github.com/adrien-legros/op
 oc expose svc python-s2i
 ```
 
+## S2I Flow
+
+![sti-flow](./images/sti-flow.png "s2i workflow")
+
 ## Build workflow
 
 The `s2i build` workflow is:
@@ -23,10 +27,6 @@ The `s2i build` workflow is:
 1. `s2i` starts the container and runs its `assemble` script
 1. `s2i` waits for the container to finish
 1. `s2i` commits the container, setting the CMD for the output image to be the `run` script and tagging the image with the name provided.
-
-## S2I Flow
-
-![sti-flow](./images/sti-flow.png "s2i workflow")
 
 ### Incremental builds
 

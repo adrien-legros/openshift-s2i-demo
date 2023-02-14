@@ -51,10 +51,11 @@ If a `save-artifacts` script exists, a prior image already exists, and the `--in
 ### `assemble`
 
 The `assemble` script builds the application artifacts from a source and places them into appropriate directories inside the image. This script is required. The workflow for this script is:
-. Optional: Restore build artifacts. If you want to support incremental builds, make sure to define `save-artifacts` as well.
-. Place the application source in the desired location.
-. Build the application artifacts.
-. Install the artifacts into locations appropriate for them to run.
+
+- Optional: Restore build artifacts. If you want to support incremental builds, make sure to define `save-artifacts` as well.
+- Place the application source in the desired location.
+- Build the application artifacts.
+- Install the artifacts into locations appropriate for them to run.
 
 ### `run`
 
@@ -70,7 +71,8 @@ The `save-artifacts` script gathers all dependencies that can speed up the build
 These dependencies are gathered into a `tar` file and streamed to the standard output.
 
 ### `usage`
-|The `usage` script allows you to inform the user how to properly use your image. This script is optional.
+
+The `usage` script allows you to inform the user how to properly use your image. This script is optional.
 
 ### `test/run`
 
